@@ -1,4 +1,4 @@
-# **Instagram Clone using React.Js**
+# **Netflix Clone using React.Js**
 
 ## **[useState](https://github.com/RgnDunes/Facebook-Messenger-Clone#)**
 This helps create a state variable inside a functional component.
