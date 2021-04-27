@@ -1,5 +1,11 @@
 # **Netflix Clone using React.Js**
 
+## Packages Used
+
+- [axios](https://www.npmjs.com/package/axios)
+- [react-youtube](https://www.npmjs.com/package/react-youtube)
+- [movie-trailer](https://www.npmjs.com/package/movie-trailer)
+
 > API used is [TMDB](https://www.themoviedb.org/)
 
 ## **[useState](https://github.com/RgnDunes/Netflix-Clone#)**
