@@ -1,5 +1,17 @@
+.row {
+  margin-left: 20px;
+}
+
 .row__posters {
   display: flex;
+  overflow-y: hidden; /*Removes vertical scroll*/
+  overflow-x: scroll; /*Adds horizontal scroll*/
+  padding: 20px;
+}
+
+/* In below style we are basically telling all the browsers that don't ever display your scrollbars but keep their functionalities. */
+.row__posters::-webkit-scrollbar {
+  display: none;
 }
 
 .row__poster {
@@ -12,5 +24,12 @@
 
 .row__poster:hover {
   transform: scale(1.08);
-  opacity: 1;
+}
+
+.row__posterLarge {
+  max-height: 250px;
+}
+
+.row__posterLarge:hover {
+  transform: scale(1.09);
 }
