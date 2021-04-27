@@ -1,6 +1,9 @@
 # **Netflix Clone using React.Js**
 
+> API used is [TMDB](https://www.themoviedb.org/)
+
 ## **[useState](https://github.com/RgnDunes/Netflix-Clone#)**
+
 This helps create a state variable inside a functional component.
 
 ```
@@ -8,9 +11,10 @@ Syntax :
 const [messages, setMessages] = useState([{}]);
 ```
 
-In above syntax *messages* is the name of state created. "setMessages" is a function that helps changing state just like setState in class component. The argument inside useState is the initial value of the state which in this case is a list of objects.
+In above syntax _messages_ is the name of state created. "setMessages" is a function that helps changing state just like setState in class component. The argument inside useState is the initial value of the state which in this case is a list of objects.
 
 ## **[useEffect](https://medium.com/trabe/react-useeffect-hook-44d8aa7cccd0)**
+
 This function executes on a given condition.
 
 ```
@@ -21,6 +25,7 @@ useEffect(() => { setUsername(prompt('Please enter your name : ')); }, [])
 Above function executes once because it's second argument is an empty list here. As long as we only want our effect (subscribe to resizes) to be called once, we pass an empty array as the second parameter of the function useEffect . An effect can optionally return a function (the cleanup function) that React will call when the component unmounts and before running the effect next time.
 
 ## **[axios](https://www.npmjs.com/package/react-axios)**
+
 Axios is a library that helps us make http requests to external resources. In our React applications we often need to retrieve data from external APIs so it can be displayed in our web pages. ... After we retrieve the data, we typically add it to the state, so it's ready to be used by our application.
 
 ```
@@ -31,6 +36,7 @@ const axiosInstance = axios.create({
   headers: { 'X-Custom-Header': 'foobar' }
 });
 ```
+
 ```
 Syntax to make a call to the api :
 axios.get('https://jsonplaceholder.typicode.com/posts').then(res => {
@@ -39,18 +45,22 @@ axios.get('https://jsonplaceholder.typicode.com/posts').then(res => {
 ```
 
 ## **[async await](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)**
+
 > The "await" keyword is only valid inside "async" functions within regular JavaScript code. If you use it outside of an async function's body, you will get a SyntaxError.
 
 > "await" can be used on its own with JavaScript modules.
+
 ```
-General Syntax : 
+General Syntax :
 async function name([param[, param[, ...param]]]) {
    statements
 }
 ```
+
 What **"await"** does is it says wait for the promise/answer to come back. async just makes a function asynchronous.
+
 ```
-Syntax : 
+Syntax :
 useEffect(() => {
         async function fetchData() {
             const request = await axios.get(fetchUrl);
@@ -59,10 +69,13 @@ useEffect(() => {
         fetchData();
     }, [])
 ```
+
 An async function is a function declared with the async keyword, and the await keyword is permitted within them. The async and await keywords enable asynchronous, promise-based behavior to be written in a cleaner style, avoiding the need to explicitly configure promise chains.
->The purpose of async/await is to simplify the syntax necessary to consume promise-based APIs. The behavior of async/await is similar to combining generators and promises.
+
+> The purpose of async/await is to simplify the syntax necessary to consume promise-based APIs. The behavior of async/await is similar to combining generators and promises.
+
 ```
-Normal Function : 
+Normal Function :
 function resolveAfter2Seconds() {
   return new Promise(resolve => {
     setTimeout(() => {
@@ -71,7 +84,7 @@ function resolveAfter2Seconds() {
   });
 }
 
-Async Function : 
+Async Function :
 async function asyncCall() {
   console.log('calling');
   const result = await resolveAfter2Seconds();
@@ -93,14 +106,13 @@ function foo() {
    return Promise.resolve(1)
 }
 ```
+
 > Async functions can contain zero or more await expressions. Await expressions make promise-returning functions behave as though they're synchronous by suspending execution until the returned promise is fulfilled or rejected. The resolved value of the promise is treated as the return value of the await expression. Use of async and await enables the use of ordinary try / catch blocks around asynchronous code.
-
-
 
 ## **[Firebase Commands Used](https://github.com/RgnDunes/Netflix-Clone#)**
 
-
 ## **[Firebase Deploy Commands](https://github.com/RgnDunes/Netflix-Clone#)**
+
 - sudo npm install -g firebase-tools
 - firebase login
 - firebase init
