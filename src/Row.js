@@ -14,7 +14,6 @@ function Row({ title, fetchUrl, isLargeRow }) {
     async function fetchData() {
       const request = await axios.get(fetchUrl);
       setMovies(request.data.results);
-    //   console.log(request.data.results);
       return request;
     }
     fetchData();
@@ -37,10 +36,8 @@ function Row({ title, fetchUrl, isLargeRow }) {
     }
     else {
         movieTrailer(movie?.name || movie?.original_title || "").then((url) => {
-            // console.log(url);
             const urlParams = new URLSearchParams(new URL(url).search);
             setTrailerUrl(urlParams.get("v"));
-            // console.log(urlParams.get("v"));
         }).catch((error) => console.log(error));
     }
   }
